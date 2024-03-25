@@ -1,0 +1,133 @@
+:root {
+  --col1: #b195c4;
+  --col2: #c49995;
+  --col3: #95c0c4;
+  --col-text: #1f1729;
+  --col-accent: #1a0920; /* hsl(284,56,8) */
+}
+
+.glitching-0 {
+  text-shadow: none;
+  color: var(--col1);
+}
+
+.glitching-1 {
+  text-shadow: 8px 1px 0px #f0f;
+  /* color: #ff0; */
+}
+
+.glitching-2 {
+  text-shadow: 8px 1px 0px #f0f, -4px 2px 0px #0ff;
+  /* color: #ff0; */
+}
+
+.glitching-3 {
+  text-shadow: -4px 2px 0px #0ff;
+  /* color: #ff0; */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  /* background: var(--col1); */
+  color: var(--col1);
+}
+
+html {
+  background: radial-gradient(
+    circle at 100%,
+    var(--col-text),
+    var(--col-text) 50%,
+    var(--col-accent) 75%,
+    var(--col-text) 75%,
+    var(--col-accent) 76%
+  );
+  height: 100%;
+}
+
+.App {
+  /* font-family: sans-serif; */
+  text-align: center;
+}
+
+.navbar {
+  --col1R: 26;
+  --col1G: 9;
+  --col1B: 32;
+  --brightness: 1000%;
+  --contrast: 170%;
+  background: linear-gradient(
+      /* rgb(
+        calc(var(--col1R) / (7 / 12)),
+        calc(var(--col1G) / (7 / 12)),
+        calc(var(--col1B) / (7 / 12))
+      ),
+      rgb(
+          calc(var(--col1R) / (14 / 22)),
+          calc(var(--col1G) / (14 / 22)),
+          calc(var(--col1B) / (14 / 22))
+        )
+        33%, */
+        var(--col-accent),
+      var(--col-accent) 33%,
+      var(--col-text)
+    ),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 1 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  filter: contrast(var(--contrast)) brightness(var(--brightness));
+  /* border-radius: 0 0 20px 20px; */
+  margin-bottom: 20px;
+  position: sticky;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  padding: 15px;
+  width: 100%;
+}
+
+.navbar * {
+  background: none;
+  color: var(--col1);
+  padding: 10px;
+  text-decoration: none;
+}
+
+.navbar img {
+  position: absolute;
+  filter: blur(0.6em) brightness(28%) contrast(68%) hue-rotate(258deg)
+    saturate(56%);
+  margin: none;
+  padding: 0;
+  align-self: center;
+  bottom: 10%;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+#about-page-container {
+  display: inline-block;
+  width: 90%;
+  text-align: left;
+}
+
+.Pages-About-glitchingcomponent-1,
+.Pages-About-glitchingcomponent-4 {
+  margin-left: 25px;
+}
+
+.discord-logo {
+  height: 12px;
+}
+
+.instagram-logo {
+  height: 12px;
+}
+
+.content a {
+  text-decoration: none;
+}
+
+.content a:hover {
+  text-decoration: green underline;
+}
